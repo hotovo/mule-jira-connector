@@ -1,0 +1,16 @@
+org.mule.module.jira.api.datasense
+org.mule.module.jira.api.datasense.category
+org.mule.module.jira.api.rest
+org.mule.modules.jirarest
+org.mule.modules.jirarest.adapter
+org.mule.modules.jirarest.adapters
+org.mule.modules.jirarest.agents
+org.mule.modules.jirarest.client
+org.mule.modules.jirarest.client.transformers
+org.mule.modules.jirarest.config
+org.mule.modules.jirarest.connectivity
+org.mule.modules.jirarest.devkit
+org.mule.modules.jirarest.model
+org.mule.modules.jirarest.pooling
+org.mule.modules.jirarest.processors
+

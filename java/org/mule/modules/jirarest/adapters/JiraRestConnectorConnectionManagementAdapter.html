@@ -1,0 +1,3586 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Documentation for Mule JiraRest Anypoint Connector." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
+<title>
+
+  JiraRestConnectorConnectionManagementAdapter
+
+
+| Mule JiraRest Anypoint Connector
+
+</title>
+<link href="../../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+<script src="../../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-toc.js" type="text/javascript"></script>
+<script src="../../../../../../assets/mule-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../../../", "../../../../../../assets/");
+</script>
+<script src="../../../../../../assets/mule-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";
+  feedback_widget_options.company = "mulesoft";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#2F74AE";
+  feedback_widget_options.style = "question";
+
+  feedback_widget_options.tag = "Mule JiraRest Anypoint Connector";
+
+  feedback_widget_options.limit = "3";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">Mule JiraRest Anypoint Connector</span>
+    
+    <ul id="header-tabs" class="">
+    
+    	<li id="guide"><a href="../../../../../../guide/install.html">
+	    	<span class="en">Install Guide</span>
+    	</a></li>
+    
+    	<li id="java"><a href="../../../../../../java/packages.html">
+	    	<span class="en">Java API Reference</span>
+    	</a></li>
+    
+    	<li id="mule"><a href="../../../../../../mule/modules.html">
+	    	<span class="en">Mule API Reference</span>
+    	</a></li>
+    
+    </ul>
+    </div>
+    <div id="headerRight">
+      <a href="http://www.mulesoft.com" tabindex="-1">
+      <img src="../../../../../../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
+      
+  <div id="searchContainer" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../../../../../../java/packages.html"  >Package Index</a> |
+                <a href="../../../../../../java/classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/jira/api/datasense/package-summary.html">org.mule.module.jira.api.datasense</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/jira/api/datasense/category/package-summary.html">org.mule.module.jira.api.datasense.category</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/jira/api/rest/package-summary.html">org.mule.module.jira.api.rest</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/package-summary.html">org.mule.modules.jirarest</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/adapter/package-summary.html">org.mule.modules.jirarest.adapter</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/adapters/package-summary.html">org.mule.modules.jirarest.adapters</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/agents/package-summary.html">org.mule.modules.jirarest.agents</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/client/package-summary.html">org.mule.modules.jirarest.client</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/client/transformers/package-summary.html">org.mule.modules.jirarest.client.transformers</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/config/package-summary.html">org.mule.modules.jirarest.config</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/connectivity/package-summary.html">org.mule.modules.jirarest.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/devkit/package-summary.html">org.mule.modules.jirarest.devkit</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/model/package-summary.html">org.mule.modules.jirarest.model</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/pooling/package-summary.html">org.mule.modules.jirarest.pooling</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/processors/package-summary.html">org.mule.modules.jirarest.processors</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorCapabilitiesAdapter.html">JiraRestConnectorCapabilitiesAdapter</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorConnectionManagementAdapter.html">JiraRestConnectorConnectionManagementAdapter</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorLifecycleInjectionAdapter.html">JiraRestConnectorLifecycleInjectionAdapter</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html">JiraRestConnectorMetadataAdapater</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorProcessAdapter.html">JiraRestConnectorProcessAdapter</a></li>
+      </ul>
+    </li>
+              
+              
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../../../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../../../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+   
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+   
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+   
+  
+  
+  
+
+  
+   
+  
+  
+   
+  
+  
+  
+
+  
+   
+  
+  
+   
+  
+  
+  
+
+  
+   
+  
+  
+   
+  
+  
+  
+
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+
+Summary:
+
+
+
+
+
+
+  <a href="#inhconstants">Inherited Constants</a>
+  
+
+
+
+  &#124; <a href="#inhfields">Inherited Fields</a>
+  
+
+
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
+
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    
+    class
+<h1>JiraRestConnectorConnectionManagementAdapter</h1>
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    extends <a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorProcessAdapter.html">JiraRestConnectorProcessAdapter</a><br/>
+  
+  
+  
+
+  
+  
+      implements 
+      
+        ConnectionManagementConnectorAdapter 
+      
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+        
+        <td colspan="7" class="jd-inheritance-class-cell">java.lang.Object</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+        
+        <td colspan="6" class="jd-inheritance-class-cell"><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">org.mule.modules.jirarest.JiraRestConnector</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+        
+        <td colspan="5" class="jd-inheritance-class-cell"><a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorCapabilitiesAdapter.html">org.mule.modules.jirarest.adapters.JiraRestConnectorCapabilitiesAdapter</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+        
+        <td colspan="4" class="jd-inheritance-class-cell"><a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html">org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+        
+        <td colspan="3" class="jd-inheritance-class-cell"><a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorLifecycleInjectionAdapter.html">org.mule.modules.jirarest.adapters.JiraRestConnectorLifecycleInjectionAdapter</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+        
+        <td colspan="2" class="jd-inheritance-class-cell"><a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorProcessAdapter.html">org.mule.modules.jirarest.adapters.JiraRestConnectorProcessAdapter</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+        
+        <td colspan="1" class="jd-inheritance-class-cell">org.mule.modules.jirarest.adapters.JiraRestConnectorConnectionManagementAdapter</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p>A <code>JiraRestConnectorConnectionManagementAdapter</code> is a wrapper around <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code> that implements org.mule.devkit.dynamic.api.helper.Connection interface.
+ 
+</p>
+
+
+
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="inhconstants" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Constants</div></th></tr>
+
+
+
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From class
+<a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html">org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater</a>
+<div id="inherited-constants-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater">
+  <div id="inherited-constants-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">String</td>
+        <td class="jd-linkcol"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#DEVKIT_BUILD">DEVKIT_BUILD</a></td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">String</td>
+        <td class="jd-linkcol"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#DEVKIT_VERSION">DEVKIT_VERSION</a></td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">String</td>
+        <td class="jd-linkcol"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#MIN_MULE_VERSION">MIN_MULE_VERSION</a></td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">String</td>
+        <td class="jd-linkcol"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#MODULE_NAME">MODULE_NAME</a></td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">String</td>
+        <td class="jd-linkcol"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#MODULE_VERSION">MODULE_VERSION</a></td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-org.mule.api.lifecycle.Disposable" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-org.mule.api.lifecycle.Disposable-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From interface
+org.mule.api.lifecycle.Disposable
+<div id="inherited-constants-org.mule.api.lifecycle.Disposable">
+  <div id="inherited-constants-org.mule.api.lifecycle.Disposable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-org.mule.api.lifecycle.Disposable-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">String</td>
+        <td class="jd-linkcol">PHASE_NAME</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-org.mule.api.lifecycle.Initialisable" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-org.mule.api.lifecycle.Initialisable-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From interface
+org.mule.api.lifecycle.Initialisable
+<div id="inherited-constants-org.mule.api.lifecycle.Initialisable">
+  <div id="inherited-constants-org.mule.api.lifecycle.Initialisable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-org.mule.api.lifecycle.Initialisable-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">String</td>
+        <td class="jd-linkcol">PHASE_NAME</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-org.mule.api.lifecycle.Startable" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-org.mule.api.lifecycle.Startable-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From interface
+org.mule.api.lifecycle.Startable
+<div id="inherited-constants-org.mule.api.lifecycle.Startable">
+  <div id="inherited-constants-org.mule.api.lifecycle.Startable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-org.mule.api.lifecycle.Startable-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">String</td>
+        <td class="jd-linkcol">PHASE_NAME</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-org.mule.api.lifecycle.Stoppable" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-org.mule.api.lifecycle.Stoppable-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From interface
+org.mule.api.lifecycle.Stoppable
+<div id="inherited-constants-org.mule.api.lifecycle.Stoppable">
+  <div id="inherited-constants-org.mule.api.lifecycle.Stoppable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-org.mule.api.lifecycle.Stoppable-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">String</td>
+        <td class="jd-linkcol">PHASE_NAME</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="inhfields" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Fields</div></th></tr>
+
+
+
+
+
+
+
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-fields-org.mule.modules.jirarest.JiraRestConnector" class="jd-expando-trigger closed"
+          ><img id="inherited-fields-org.mule.modules.jirarest.JiraRestConnector-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From class
+<a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html">org.mule.modules.jirarest.JiraRestConnector</a>
+<div id="inherited-fields-org.mule.modules.jirarest.JiraRestConnector">
+  <div id="inherited-fields-org.mule.modules.jirarest.JiraRestConnector-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-fields-org.mule.modules.jirarest.JiraRestConnector-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          
+          
+          String</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issueKey">issueKey</a></td>
+          <td class="jd-descrcol" width="100%">Key of a sample Issue for which metadata will be retrieved, if Datasense is enabled.</td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          
+          
+          <a href="../../../../../../java/org/mule/modules/jirarest/ConnectorConnectionStrategy.html">ConnectorConnectionStrategy</a></nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#strategy">strategy</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorConnectionManagementAdapter.html#JiraRestConnectorConnectionManagementAdapter()">JiraRestConnectorConnectionManagementAdapter</a></span>()</nobr>
+        
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorProcessAdapter" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorProcessAdapter-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorProcessAdapter.html">org.mule.modules.jirarest.adapters.JiraRestConnectorProcessAdapter</a>
+
+<div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorProcessAdapter">
+  <div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorProcessAdapter-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorProcessAdapter-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            &lt;P&gt;
+            ProcessTemplate&lt;P,&nbsp;<a href="../../../../../../java/org/mule/modules/jirarest/adapters/JiraRestConnectorCapabilitiesAdapter.html">JiraRestConnectorCapabilitiesAdapter</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorProcessAdapter.html#getProcessTemplate()">getProcessTemplate</a></span>()</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorLifecycleInjectionAdapter" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorLifecycleInjectionAdapter-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorLifecycleInjectionAdapter.html">org.mule.modules.jirarest.adapters.JiraRestConnectorLifecycleInjectionAdapter</a>
+
+<div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorLifecycleInjectionAdapter">
+  <div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorLifecycleInjectionAdapter-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorLifecycleInjectionAdapter-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorLifecycleInjectionAdapter.html#dispose()">dispose</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorLifecycleInjectionAdapter.html#initialise()">initialise</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorLifecycleInjectionAdapter.html#start()">start</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorLifecycleInjectionAdapter.html#stop()">stop</a></span>()</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html">org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater</a>
+
+<div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater">
+  <div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorMetadataAdapater-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#getDevkitBuild()">getDevkitBuild</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#getDevkitVersion()">getDevkitVersion</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#getMinMuleVersion()">getMinMuleVersion</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#getModuleName()">getModuleName</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorMetadataAdapater.html#getModuleVersion()">getModuleVersion</a></span>()</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorCapabilitiesAdapter" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorCapabilitiesAdapter-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorCapabilitiesAdapter.html">org.mule.modules.jirarest.adapters.JiraRestConnectorCapabilitiesAdapter</a>
+
+<div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorCapabilitiesAdapter">
+  <div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorCapabilitiesAdapter-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.modules.jirarest.adapters.JiraRestConnectorCapabilitiesAdapter-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/adapters/JiraRestConnectorCapabilitiesAdapter.html#isCapableOf(org.mule.api.devkit.capability.ModuleCapability)">isCapableOf</a></span>(ModuleCapability capability)</nobr>
+        
+        <div class="jd-descrdiv">Returns true if this module implements such capability
+ 
+</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.modules.jirarest.JiraRestConnector" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.modules.jirarest.JiraRestConnector-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html">org.mule.modules.jirarest.JiraRestConnector</a>
+
+<div id="inherited-methods-org.mule.modules.jirarest.JiraRestConnector">
+  <div id="inherited-methods-org.mule.modules.jirarest.JiraRestConnector-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.modules.jirarest.JiraRestConnector-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Object</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#aGenericRestRequest(org.mule.modules.jirarest.client.JiraClient.HttpMethod, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">aGenericRestRequest</a></span>(<a href="../../../../../../java/org/mule/modules/jirarest/client/JiraClient.HttpMethod.html">JiraClient.HttpMethod</a> httpMethod, String url, Map&lt;String,&nbsp;Object&gt; body)</nobr>
+        
+        <div class="jd-descrdiv">Generic rest request
+
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#attachmentsAddAttachment(java.lang.String, java.io.InputStream, java.lang.String)">attachmentsAddAttachment</a></span>(String issueKeyOrId, InputStream in, String filename)</nobr>
+        
+        <div class="jd-descrdiv">Adds attachment to the issue
+
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            InputStream</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#attachmentsGetAttachment(java.lang.String)">attachmentsGetAttachment</a></span>(String attachmentLink)</nobr>
+        
+        <div class="jd-descrdiv">Retrieves the content of given attachment.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;<a href="../../../../../../java/org/mule/modules/jirarest/model/Attachment.html">Attachment</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#attachmentsGetAttachmentsFromIssue(java.lang.String)">attachmentsGetAttachmentsFromIssue</a></span>(String issueKeyOrId)</nobr>
+        
+        <div class="jd-descrdiv">Retrieves attachments from given issue.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#componentsCreateComponent(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">componentsCreateComponent</a></span>(String entityType, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Creates a new component
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#componentsDeleteComponent(java.lang.String)">componentsDeleteComponent</a></span>(String id)</nobr>
+        
+        <div class="jd-descrdiv">Deletes a component by Id
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#componentsGetComponent(java.lang.String, java.lang.String)">componentsGetComponent</a></span>(String entityType, String id)</nobr>
+        
+        <div class="jd-descrdiv">Gets a component by Id
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#componentsUpdateComponent(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">componentsUpdateComponent</a></span>(String entityType, String id, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Updates an existing component
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#getIssueKey()">getIssueKey</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/mule/modules/jirarest/ConnectorConnectionStrategy.html">ConnectorConnectionStrategy</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#getStrategy()">getStrategy</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#groupsAddUserToGroup(java.lang.String, java.lang.String)">groupsAddUserToGroup</a></span>(String groupName, String user)</nobr>
+        
+        <div class="jd-descrdiv">Adds given user to a group.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#groupsCreateGroup(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">groupsCreateGroup</a></span>(String entityType, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Creates a new group
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#groupsDeleteGroup(java.lang.String, java.lang.String)">groupsDeleteGroup</a></span>(String groupName, String swapGroup)</nobr>
+        
+        <div class="jd-descrdiv">Deletes a group by group name
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#groupsDeleteUserFromGroup(java.lang.String, java.lang.String)">groupsDeleteUserFromGroup</a></span>(String groupName, String user)</nobr>
+        
+        <div class="jd-descrdiv">Removes given user from a group.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#groupsGetGroup(java.lang.String, java.lang.String, java.lang.String)">groupsGetGroup</a></span>(String entityType, String groupName, String expand)</nobr>
+        
+        <div class="jd-descrdiv">Gets a group by group name
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesAssignee(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesAssignee</a></span>(String entityType, String issueKeyOrId, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Sets assignee for requested issue
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentAdd(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>, java.lang.String)">issuesCommentAdd</a></span>(String entityType, String issueKeyOrId, Map&lt;String,&nbsp;Object&gt; payload, String expand)</nobr>
+        
+        <div class="jd-descrdiv">Adds new comment to an issue
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentDelete(java.lang.String, java.lang.String)">issuesCommentDelete</a></span>(String issueKeyOrId, String commentId)</nobr>
+        
+        <div class="jd-descrdiv">Deletes comment by id
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentGet(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">issuesCommentGet</a></span>(String entityType, String issueKeyOrId, String commentId, String expand)</nobr>
+        
+        <div class="jd-descrdiv">Gets a comment by id
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentUpdate(java.lang.String, java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>, java.lang.String)">issuesCommentUpdate</a></span>(String entityType, String issueKeyOrId, String commentId, Map&lt;String,&nbsp;Object&gt; payload, String expand)</nobr>
+        
+        <div class="jd-descrdiv">Updates existing comment
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentsGet(java.lang.String, java.lang.String, java.lang.String)">issuesCommentsGet</a></span>(String entityType, String issueKeyOrId, String expand)</nobr>
+        
+        <div class="jd-descrdiv">Gets comments for requested issue
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesCreateMetaGet(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">issuesCreateMetaGet</a></span>(String entityType, String projectIds, String projectKeys, String issueTypeIds, String issueTypeNames)</nobr>
+        
+        <div class="jd-descrdiv">Returns the meta data for creating issues.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueCreate</a></span>(String entityType, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Creates an issue or a sub-task from a input Map
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueDelete(java.lang.String, java.lang.Boolean)">issuesIssueDelete</a></span>(String issueKeyOrId, Boolean deleteSubtasks)</nobr>
+        
+        <div class="jd-descrdiv">Deletes an issue by issue key or id
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueGet(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">issuesIssueGet</a></span>(String entityType, String issueKeyOrId, String fields, String expand)</nobr>
+        
+        <div class="jd-descrdiv">Returns a full representation of the issue for the given issue key
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueGetUpdate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueGetUpdate</a></span>(String entityType, String issueKeyOrId, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Updates an issue with input.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueLinkCreate</a></span>(String entityType, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Creates an issue link between two issues.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkDelete(java.lang.String)">issuesIssueLinkDelete</a></span>(String linkId)</nobr>
+        
+        <div class="jd-descrdiv">Deletes an issue link with the specified id.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkGet(java.lang.String, java.lang.String)">issuesIssueLinkGet</a></span>(String entityType, String linkId)</nobr>
+        
+        <div class="jd-descrdiv">Returns an issue link with the specified id.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypeCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueLinkTypeCreate</a></span>(String entityType, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Create a new issue link type.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypeDelete(java.lang.String)">issuesIssueLinkTypeDelete</a></span>(String issueLinkTypeId)</nobr>
+        
+        <div class="jd-descrdiv">Delete the specified issue link type.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypeGet(java.lang.String, java.lang.String)">issuesIssueLinkTypeGet</a></span>(String entityType, String issueLinkTypeId)</nobr>
+        
+        <div class="jd-descrdiv">Returns for a given issue link type id all information about this issue link type.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypeUpdate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueLinkTypeUpdate</a></span>(String entityType, String issueLinkTypeId, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Update the specified issue link type.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypesGet(java.lang.String)">issuesIssueLinkTypesGet</a></span>(String entityType)</nobr>
+        
+        <div class="jd-descrdiv">Returns a list of available issue link types, if issue linking is enabled.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueMetadataGet(java.lang.String, java.lang.String)">issuesIssueMetadataGet</a></span>(String entityType, String issueKeyOrId)</nobr>
+        
+        <div class="jd-descrdiv">Returns the meta data for editing an issue.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueTypeGet(java.lang.String, java.lang.String)">issuesIssueTypeGet</a></span>(String entityType, String id)</nobr>
+        
+        <div class="jd-descrdiv">Returns a full representation of the issue type that has the given id.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueTypesGet(java.lang.String)">issuesIssueTypesGet</a></span>(String entityType)</nobr>
+        
+        <div class="jd-descrdiv">Returns a list of all issue types visible to the user
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesNotify(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesNotify</a></span>(String entityType, String issueKeyOrId, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Sends a notification (email) to the list or recipients defined in the request.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesPrioritiesGet(java.lang.String)">issuesPrioritiesGet</a></span>(String entityType)</nobr>
+        
+        <div class="jd-descrdiv">Returns a list of all issue priorities.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesPriorityGet(java.lang.String, java.lang.String)">issuesPriorityGet</a></span>(String entityType, String id)</nobr>
+        
+        <div class="jd-descrdiv">Returns an issue priority.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinkCreate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesRemoteLinkCreate</a></span>(String entityType, String issueKeyOrId, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Creates or updates a remote issue link from a input.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinkDelete(java.lang.String, java.lang.String)">issuesRemoteLinkDelete</a></span>(String issueKeyOrId, String linkId)</nobr>
+        
+        <div class="jd-descrdiv">Deletes a remote link
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinkGet(java.lang.String, java.lang.String, java.lang.String)">issuesRemoteLinkGet</a></span>(String entityType, String issueKeyOrId, String linkId)</nobr>
+        
+        <div class="jd-descrdiv">Gets a remote link of an Issue by id
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinkUpdate(java.lang.String, java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesRemoteLinkUpdate</a></span>(String entityType, String issueKeyOrId, String linkId, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Updates an existing remote link
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinksGet(java.lang.String, java.lang.String, java.lang.String)">issuesRemoteLinksGet</a></span>(String entityType, String issueKeyOrId, String globalId)</nobr>
+        
+        <div class="jd-descrdiv">A sub-resource representing the remote issue links on the issue.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesStatusGet(java.lang.String, java.lang.String)">issuesStatusGet</a></span>(String entityType, String idOrName)</nobr>
+        
+        <div class="jd-descrdiv">Returns an issue status.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesStatusesGet(java.lang.String)">issuesStatusesGet</a></span>(String entityType)</nobr>
+        
+        <div class="jd-descrdiv">Returns a list of all issue statuses.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesTransitionPerform(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesTransitionPerform</a></span>(String entityType, String issueKeyOrId, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Perform a transition on an issue.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesTransitionsGet(java.lang.String, java.lang.String, java.lang.String)">issuesTransitionsGet</a></span>(String entityType, String issueKeyOrId, String transitionId)</nobr>
+        
+        <div class="jd-descrdiv">Get a list of the transitions possible for this issue by the current user, along with fields that are required and their types.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesVoteAdd(java.lang.String)">issuesVoteAdd</a></span>(String issueKeyOrId)</nobr>
+        
+        <div class="jd-descrdiv">Cast your vote in favour of an issue.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesVoteDelete(java.lang.String)">issuesVoteDelete</a></span>(String issueKeyOrId)</nobr>
+        
+        <div class="jd-descrdiv">Remove your vote from an issue.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesVotesGet(java.lang.String, java.lang.String)">issuesVotesGet</a></span>(String entityType, String issueKeyOrId)</nobr>
+        
+        <div class="jd-descrdiv">Get voters of an issue
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesWatcherCreate(java.lang.String, java.lang.String)">issuesWatcherCreate</a></span>(String issueKeyOrId, String user)</nobr>
+        
+        <div class="jd-descrdiv">Adds a user to an issue's watcher list.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesWatcherDelete(java.lang.String, java.lang.String)">issuesWatcherDelete</a></span>(String issueKeyOrId, String user)</nobr>
+        
+        <div class="jd-descrdiv">Removes a user from an issue's watcher list.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesWatchersGet(java.lang.String, java.lang.String)">issuesWatchersGet</a></span>(String entityType, String issueKeyOrId)</nobr>
+        
+        <div class="jd-descrdiv">Returns the list of watchers for the issue with the given key.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogCreate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesWorklogCreate</a></span>(String entityType, String issueKeyOrId, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Adds a new worklog entry to an issue.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogDelete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">issuesWorklogDelete</a></span>(String issueKeyOrId, String id, String adjustEstimate, String newEstimate, String increaseBy)</nobr>
+        
+        <div class="jd-descrdiv">Deletes specific worklog entry
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogGet(java.lang.String, java.lang.String, java.lang.String)">issuesWorklogGet</a></span>(String entityType, String issueKeyOrId, String id)</nobr>
+        
+        <div class="jd-descrdiv">Returns a specific worklog.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogUpdate(java.lang.String, java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>, java.lang.String, java.lang.String)">issuesWorklogUpdate</a></span>(String entityType, String issueKeyOrId, String id, Map&lt;String,&nbsp;Object&gt; payload, String adjustEstimate, String newEstimate)</nobr>
+        
+        <div class="jd-descrdiv">Updates an existing worklog entry
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogsGet(java.lang.String, java.lang.String)">issuesWorklogsGet</a></span>(String entityType, String issueKeyOrId)</nobr>
+        
+        <div class="jd-descrdiv">Returns all work logs for an issue.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#myself()">myself</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Get info about currently logged user
+
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectCategoriesGet(java.lang.String)">projectCategoriesGet</a></span>(String entityType)</nobr>
+        
+        <div class="jd-descrdiv">Gets a full representation of the project categories.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectCategoryCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">projectCategoryCreate</a></span>(String entityType, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Create a project category
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectCategoryDelete(java.lang.String)">projectCategoryDelete</a></span>(String categoryId)</nobr>
+        
+        <div class="jd-descrdiv">Deletes a specific project category
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectCategoryGet(java.lang.String, java.lang.String)">projectCategoryGet</a></span>(String entityType, String categoryId)</nobr>
+        
+        <div class="jd-descrdiv">Gets a specific project category
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectCategoryUpdate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">projectCategoryUpdate</a></span>(String entityType, String categoryId, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Updates a project category
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectsComponentsGet(java.lang.String, java.lang.String)">projectsComponentsGet</a></span>(String entityType, String projectIdOrKey)</nobr>
+        
+        <div class="jd-descrdiv">Gets a full representation of the specified project's components.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectsProjectGet(java.lang.String, java.lang.String)">projectsProjectGet</a></span>(String entityType, String projectIdOrKey)</nobr>
+        
+        <div class="jd-descrdiv">Gets a full representation of requested project
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectsProjectsGet(java.lang.String)">projectsProjectsGet</a></span>(String entityType)</nobr>
+        
+        <div class="jd-descrdiv">Returns all projects which are visible for the currently logged in user.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectsStatusesGet(java.lang.String, java.lang.String)">projectsStatusesGet</a></span>(String entityType, String projectIdOrKey)</nobr>
+        
+        <div class="jd-descrdiv">Gets a full representation of the specified project's statuses.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#projectsVersionsGet(java.lang.String, java.lang.String)">projectsVersionsGet</a></span>(String entityType, String projectIdOrKey)</nobr>
+        
+        <div class="jd-descrdiv">Gets a full representation of the specified project's versions.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#search(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String)">search</a></span>(String entityType, String jql, String startAt, String maxResults, Boolean validateQuery, String fields, String expand)</nobr>
+        
+        <div class="jd-descrdiv">Searches for issues using JQL.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#setIssueKey(java.lang.String)">setIssueKey</a></span>(String issueKey)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#setStrategy(org.mule.modules.jirarest.ConnectorConnectionStrategy)">setStrategy</a></span>(<a href="../../../../../../java/org/mule/modules/jirarest/ConnectorConnectionStrategy.html">ConnectorConnectionStrategy</a> strategy)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#userCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">userCreate</a></span>(String entityType, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Create user.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#userDelete(java.lang.String, java.lang.String)">userDelete</a></span>(String user, String key)</nobr>
+        
+        <div class="jd-descrdiv">Deletes requested user
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#userGet(java.lang.String, java.lang.String, java.lang.String)">userGet</a></span>(String entityType, String user, String key)</nobr>
+        
+        <div class="jd-descrdiv">Gets requested user
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#userGetAssignable(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">userGetAssignable</a></span>(String entityType, String user, String project, String issueKey, String startAt, String maxResults)</nobr>
+        
+        <div class="jd-descrdiv">Returns a list of users that match the search string.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#userGetAssignableProject(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">userGetAssignableProject</a></span>(String entityType, String user, String projectKeys, String startAt, String maxResults)</nobr>
+        
+        <div class="jd-descrdiv">Returns a list of users that match the search string and can be assigned issues for all the given projects.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;Map&lt;String,&nbsp;Object&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#userSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.Boolean)">userSearch</a></span>(String entityType, String user, String startAt, String maxResults, Boolean includeActive, Boolean includeInactive)</nobr>
+        
+        <div class="jd-descrdiv">Returns a list of users that match the search string.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#userUpdate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>, java.lang.String, java.lang.String)">userUpdate</a></span>(String entityType, Map&lt;String,&nbsp;Object&gt; payload, String username, String key)</nobr>
+        
+        <div class="jd-descrdiv">Updates requested user.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#versionCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">versionCreate</a></span>(String entityType, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Create a version
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#versionDelete(java.lang.String)">versionDelete</a></span>(String id)</nobr>
+        
+        <div class="jd-descrdiv">Deletes a version
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#versionGet(java.lang.String, java.lang.String)">versionGet</a></span>(String entityType, String id)</nobr>
+        
+        <div class="jd-descrdiv">Gets a specific version
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Map&lt;String,&nbsp;Object&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/modules/jirarest/JiraRestConnector.html#versionUpdate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">versionUpdate</a></span>(String entityType, String id, Map&lt;String,&nbsp;Object&gt; payload)</nobr>
+        
+        <div class="jd-descrdiv">Updates a version
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  java.lang.Object
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Object</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">clone</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">equals</span>(Object arg0)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">finalize</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            Class&lt;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getClass</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">hashCode</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notify</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notifyAll</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">toString</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.MetadataAware" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.api.MetadataAware-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  org.mule.api.MetadataAware
+
+<div id="inherited-methods-org.mule.api.MetadataAware">
+  <div id="inherited-methods-org.mule.api.MetadataAware-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.api.MetadataAware-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getDevkitBuild</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getDevkitVersion</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getMinMuleVersion</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getModuleName</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getModuleVersion</span>()</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.devkit.ProcessAdapter" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.api.devkit.ProcessAdapter-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  org.mule.api.devkit.ProcessAdapter
+
+<div id="inherited-methods-org.mule.api.devkit.ProcessAdapter">
+  <div id="inherited-methods-org.mule.api.devkit.ProcessAdapter-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.api.devkit.ProcessAdapter-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            &lt;T&gt;
+            ProcessTemplate&lt;T,&nbsp;O&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getProcessTemplate</span>()</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.devkit.capability.Capabilities" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.api.devkit.capability.Capabilities-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  org.mule.api.devkit.capability.Capabilities
+
+<div id="inherited-methods-org.mule.api.devkit.capability.Capabilities">
+  <div id="inherited-methods-org.mule.api.devkit.capability.Capabilities-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.api.devkit.capability.Capabilities-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">isCapableOf</span>(ModuleCapability arg0)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.lifecycle.Disposable" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.api.lifecycle.Disposable-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  org.mule.api.lifecycle.Disposable
+
+<div id="inherited-methods-org.mule.api.lifecycle.Disposable">
+  <div id="inherited-methods-org.mule.api.lifecycle.Disposable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.api.lifecycle.Disposable-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">dispose</span>()</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.lifecycle.Initialisable" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.api.lifecycle.Initialisable-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  org.mule.api.lifecycle.Initialisable
+
+<div id="inherited-methods-org.mule.api.lifecycle.Initialisable">
+  <div id="inherited-methods-org.mule.api.lifecycle.Initialisable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.api.lifecycle.Initialisable-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">initialise</span>()</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.lifecycle.Startable" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.api.lifecycle.Startable-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  org.mule.api.lifecycle.Startable
+
+<div id="inherited-methods-org.mule.api.lifecycle.Startable">
+  <div id="inherited-methods-org.mule.api.lifecycle.Startable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.api.lifecycle.Startable-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">start</span>()</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.lifecycle.Stoppable" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.api.lifecycle.Stoppable-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  org.mule.api.lifecycle.Stoppable
+
+<div id="inherited-methods-org.mule.api.lifecycle.Stoppable">
+  <div id="inherited-methods-org.mule.api.lifecycle.Stoppable-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.api.lifecycle.Stoppable-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">stop</span>()</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<A NAME="JiraRestConnectorConnectionManagementAdapter()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">JiraRestConnectorConnectionManagementAdapter</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<A NAME="navbar_top"></A>
+
+<div id="footer">
+Generated by <a href="http://www.mulesoft.com/devkit">Mule DevKit</a>. Document generation technology based on <a href="http://code.google.com/p/doclava/">Google's Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize mule-developer-docs.js */
+</script>
+
+</body>
+</html>

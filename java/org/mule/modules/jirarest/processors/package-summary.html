@@ -1,0 +1,793 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Documentation for Mule JiraRest Anypoint Connector." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
+<title>
+
+  org.mule.modules.jirarest.processors
+
+
+| Mule JiraRest Anypoint Connector
+
+</title>
+<link href="../../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+<script src="../../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-toc.js" type="text/javascript"></script>
+<script src="../../../../../../assets/mule-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../../../", "../../../../../../assets/");
+</script>
+<script src="../../../../../../assets/mule-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";
+  feedback_widget_options.company = "mulesoft";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#2F74AE";
+  feedback_widget_options.style = "question";
+
+  feedback_widget_options.tag = "Mule JiraRest Anypoint Connector";
+
+  feedback_widget_options.limit = "3";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">Mule JiraRest Anypoint Connector</span>
+    
+    <ul id="header-tabs" class="java">
+    
+    	<li id="guide"><a href="../../../../../../guide/install.html">
+	    	<span class="en">Install Guide</span>
+    	</a></li>
+    
+    	<li id="java"><a href="../../../../../../java/packages.html">
+	    	<span class="en">Java API Reference</span>
+    	</a></li>
+    
+    	<li id="mule"><a href="../../../../../../mule/modules.html">
+	    	<span class="en">Mule API Reference</span>
+    	</a></li>
+    
+    </ul>
+    </div>
+    <div id="headerRight">
+      <a href="http://www.mulesoft.com" tabindex="-1">
+      <img src="../../../../../../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
+      
+  <div id="searchContainer" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../../../../../../java/packages.html"  >Package Index</a> |
+                <a href="../../../../../../java/classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/jira/api/datasense/package-summary.html">org.mule.module.jira.api.datasense</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/jira/api/datasense/category/package-summary.html">org.mule.module.jira.api.datasense.category</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/jira/api/rest/package-summary.html">org.mule.module.jira.api.rest</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/package-summary.html">org.mule.modules.jirarest</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/adapter/package-summary.html">org.mule.modules.jirarest.adapter</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/adapters/package-summary.html">org.mule.modules.jirarest.adapters</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/agents/package-summary.html">org.mule.modules.jirarest.agents</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/client/package-summary.html">org.mule.modules.jirarest.client</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/client/transformers/package-summary.html">org.mule.modules.jirarest.client.transformers</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/config/package-summary.html">org.mule.modules.jirarest.config</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/connectivity/package-summary.html">org.mule.modules.jirarest.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/devkit/package-summary.html">org.mule.modules.jirarest.devkit</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/model/package-summary.html">org.mule.modules.jirarest.model</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/pooling/package-summary.html">org.mule.modules.jirarest.pooling</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../../../java/org/mule/modules/jirarest/processors/package-summary.html">org.mule.modules.jirarest.processors</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+              
+    <li><h2>Classes</h2>
+      <ul>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/AGenericRestRequestMessageProcessor.html">AGenericRestRequestMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/AttachmentsAddAttachmentMessageProcessor.html">AttachmentsAddAttachmentMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/AttachmentsGetAttachmentMessageProcessor.html">AttachmentsGetAttachmentMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/AttachmentsGetAttachmentsFromIssueMessageProcessor.html">AttachmentsGetAttachmentsFromIssueMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ComponentsCreateComponentMessageProcessor.html">ComponentsCreateComponentMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ComponentsDeleteComponentMessageProcessor.html">ComponentsDeleteComponentMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ComponentsGetComponentMessageProcessor.html">ComponentsGetComponentMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ComponentsUpdateComponentMessageProcessor.html">ComponentsUpdateComponentMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsAddUserToGroupMessageProcessor.html">GroupsAddUserToGroupMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsCreateGroupMessageProcessor.html">GroupsCreateGroupMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsDeleteGroupMessageProcessor.html">GroupsDeleteGroupMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsDeleteUserFromGroupMessageProcessor.html">GroupsDeleteUserFromGroupMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsGetGroupMessageProcessor.html">GroupsGetGroupMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesAssigneeMessageProcessor.html">IssuesAssigneeMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentAddMessageProcessor.html">IssuesCommentAddMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentDeleteMessageProcessor.html">IssuesCommentDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentGetMessageProcessor.html">IssuesCommentGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentsGetMessageProcessor.html">IssuesCommentsGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentUpdateMessageProcessor.html">IssuesCommentUpdateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCreateMetaGetMessageProcessor.html">IssuesCreateMetaGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueCreateMessageProcessor.html">IssuesIssueCreateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueDeleteMessageProcessor.html">IssuesIssueDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueGetMessageProcessor.html">IssuesIssueGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueGetUpdateMessageProcessor.html">IssuesIssueGetUpdateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkCreateMessageProcessor.html">IssuesIssueLinkCreateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkDeleteMessageProcessor.html">IssuesIssueLinkDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkGetMessageProcessor.html">IssuesIssueLinkGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypeCreateMessageProcessor.html">IssuesIssueLinkTypeCreateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypeDeleteMessageProcessor.html">IssuesIssueLinkTypeDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypeGetMessageProcessor.html">IssuesIssueLinkTypeGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypesGetMessageProcessor.html">IssuesIssueLinkTypesGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypeUpdateMessageProcessor.html">IssuesIssueLinkTypeUpdateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueMetadataGetMessageProcessor.html">IssuesIssueMetadataGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueTypeGetMessageProcessor.html">IssuesIssueTypeGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueTypesGetMessageProcessor.html">IssuesIssueTypesGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesNotifyMessageProcessor.html">IssuesNotifyMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesPrioritiesGetMessageProcessor.html">IssuesPrioritiesGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesPriorityGetMessageProcessor.html">IssuesPriorityGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinkCreateMessageProcessor.html">IssuesRemoteLinkCreateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinkDeleteMessageProcessor.html">IssuesRemoteLinkDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinkGetMessageProcessor.html">IssuesRemoteLinkGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinksGetMessageProcessor.html">IssuesRemoteLinksGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinkUpdateMessageProcessor.html">IssuesRemoteLinkUpdateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesStatusesGetMessageProcessor.html">IssuesStatusesGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesStatusGetMessageProcessor.html">IssuesStatusGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesTransitionPerformMessageProcessor.html">IssuesTransitionPerformMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesTransitionsGetMessageProcessor.html">IssuesTransitionsGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesVoteAddMessageProcessor.html">IssuesVoteAddMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesVoteDeleteMessageProcessor.html">IssuesVoteDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesVotesGetMessageProcessor.html">IssuesVotesGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWatcherCreateMessageProcessor.html">IssuesWatcherCreateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWatcherDeleteMessageProcessor.html">IssuesWatcherDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWatchersGetMessageProcessor.html">IssuesWatchersGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogCreateMessageProcessor.html">IssuesWorklogCreateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogDeleteMessageProcessor.html">IssuesWorklogDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogGetMessageProcessor.html">IssuesWorklogGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogsGetMessageProcessor.html">IssuesWorklogsGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogUpdateMessageProcessor.html">IssuesWorklogUpdateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/MyselfMessageProcessor.html">MyselfMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoriesGetMessageProcessor.html">ProjectCategoriesGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoryCreateMessageProcessor.html">ProjectCategoryCreateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoryDeleteMessageProcessor.html">ProjectCategoryDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoryGetMessageProcessor.html">ProjectCategoryGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoryUpdateMessageProcessor.html">ProjectCategoryUpdateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsComponentsGetMessageProcessor.html">ProjectsComponentsGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsProjectGetMessageProcessor.html">ProjectsProjectGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsProjectsGetMessageProcessor.html">ProjectsProjectsGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsStatusesGetMessageProcessor.html">ProjectsStatusesGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsVersionsGetMessageProcessor.html">ProjectsVersionsGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/SearchMessageProcessor.html">SearchMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserCreateMessageProcessor.html">UserCreateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserDeleteMessageProcessor.html">UserDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserGetAssignableMessageProcessor.html">UserGetAssignableMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserGetAssignableProjectMessageProcessor.html">UserGetAssignableProjectMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserGetMessageProcessor.html">UserGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserSearchMessageProcessor.html">UserSearchMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserUpdateMessageProcessor.html">UserUpdateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/VersionCreateMessageProcessor.html">VersionCreateMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/VersionDeleteMessageProcessor.html">VersionDeleteMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/VersionGetMessageProcessor.html">VersionGetMessageProcessor</a></li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/modules/jirarest/processors/VersionUpdateMessageProcessor.html">VersionUpdateMessageProcessor</a></li>
+      </ul>
+    </li>
+              
+              
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../../../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../../../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div>
+
+<div id="jd-header">
+  package
+  <h1>org.mule.modules.jirarest.processors</h1>
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+
+
+
+
+
+
+  
+
+
+  
+    <h2>Classes</h2>
+    <div class="jd-sumtable">
+    
+  <table class="jd-sumtable-expando">
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/AGenericRestRequestMessageProcessor.html">AGenericRestRequestMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">AGenericRestRequestMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#aGenericRestRequest(org.mule.modules.jirarest.client.JiraClient.HttpMethod, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">aGenericRestRequest(org.mule.modules.jirarest.client.JiraClient.HttpMethod, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/AttachmentsAddAttachmentMessageProcessor.html">AttachmentsAddAttachmentMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">AttachmentsAddAttachmentMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#attachmentsAddAttachment(java.lang.String, java.io.InputStream, java.lang.String)">attachmentsAddAttachment(java.lang.String, java.io.InputStream, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/AttachmentsGetAttachmentMessageProcessor.html">AttachmentsGetAttachmentMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">AttachmentsGetAttachmentMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#attachmentsGetAttachment(java.lang.String)">attachmentsGetAttachment(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/AttachmentsGetAttachmentsFromIssueMessageProcessor.html">AttachmentsGetAttachmentsFromIssueMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">AttachmentsGetAttachmentsFromIssueMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#attachmentsGetAttachmentsFromIssue(java.lang.String)">attachmentsGetAttachmentsFromIssue(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ComponentsCreateComponentMessageProcessor.html">ComponentsCreateComponentMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ComponentsCreateComponentMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#componentsCreateComponent(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">componentsCreateComponent(java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ComponentsDeleteComponentMessageProcessor.html">ComponentsDeleteComponentMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ComponentsDeleteComponentMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#componentsDeleteComponent(java.lang.String)">componentsDeleteComponent(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ComponentsGetComponentMessageProcessor.html">ComponentsGetComponentMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ComponentsGetComponentMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#componentsGetComponent(java.lang.String, java.lang.String)">componentsGetComponent(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ComponentsUpdateComponentMessageProcessor.html">ComponentsUpdateComponentMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ComponentsUpdateComponentMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#componentsUpdateComponent(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">componentsUpdateComponent(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsAddUserToGroupMessageProcessor.html">GroupsAddUserToGroupMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GroupsAddUserToGroupMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#groupsAddUserToGroup(java.lang.String, java.lang.String)">groupsAddUserToGroup(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsCreateGroupMessageProcessor.html">GroupsCreateGroupMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GroupsCreateGroupMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#groupsCreateGroup(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">groupsCreateGroup(java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsDeleteGroupMessageProcessor.html">GroupsDeleteGroupMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GroupsDeleteGroupMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#groupsDeleteGroup(java.lang.String, java.lang.String)">groupsDeleteGroup(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsDeleteUserFromGroupMessageProcessor.html">GroupsDeleteUserFromGroupMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GroupsDeleteUserFromGroupMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#groupsDeleteUserFromGroup(java.lang.String, java.lang.String)">groupsDeleteUserFromGroup(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/GroupsGetGroupMessageProcessor.html">GroupsGetGroupMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GroupsGetGroupMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#groupsGetGroup(java.lang.String, java.lang.String, java.lang.String)">groupsGetGroup(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesAssigneeMessageProcessor.html">IssuesAssigneeMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesAssigneeMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesAssignee(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesAssignee(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentAddMessageProcessor.html">IssuesCommentAddMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesCommentAddMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentAdd(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>, java.lang.String)">issuesCommentAdd(java.lang.String, java.lang.String, java.util.Map, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentDeleteMessageProcessor.html">IssuesCommentDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesCommentDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentDelete(java.lang.String, java.lang.String)">issuesCommentDelete(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentGetMessageProcessor.html">IssuesCommentGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesCommentGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentGet(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">issuesCommentGet(java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentsGetMessageProcessor.html">IssuesCommentsGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesCommentsGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentsGet(java.lang.String, java.lang.String, java.lang.String)">issuesCommentsGet(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCommentUpdateMessageProcessor.html">IssuesCommentUpdateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesCommentUpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesCommentUpdate(java.lang.String, java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>, java.lang.String)">issuesCommentUpdate(java.lang.String, java.lang.String, java.lang.String, java.util.Map, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesCreateMetaGetMessageProcessor.html">IssuesCreateMetaGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesCreateMetaGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesCreateMetaGet(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">issuesCreateMetaGet(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueCreateMessageProcessor.html">IssuesIssueCreateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueCreateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueCreate(java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueDeleteMessageProcessor.html">IssuesIssueDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueDelete(java.lang.String, java.lang.Boolean)">issuesIssueDelete(java.lang.String, java.lang.Boolean)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueGetMessageProcessor.html">IssuesIssueGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueGet(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">issuesIssueGet(java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueGetUpdateMessageProcessor.html">IssuesIssueGetUpdateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueGetUpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueGetUpdate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueGetUpdate(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkCreateMessageProcessor.html">IssuesIssueLinkCreateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueLinkCreateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueLinkCreate(java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkDeleteMessageProcessor.html">IssuesIssueLinkDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueLinkDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkDelete(java.lang.String)">issuesIssueLinkDelete(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkGetMessageProcessor.html">IssuesIssueLinkGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueLinkGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkGet(java.lang.String, java.lang.String)">issuesIssueLinkGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypeCreateMessageProcessor.html">IssuesIssueLinkTypeCreateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueLinkTypeCreateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypeCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueLinkTypeCreate(java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypeDeleteMessageProcessor.html">IssuesIssueLinkTypeDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueLinkTypeDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypeDelete(java.lang.String)">issuesIssueLinkTypeDelete(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypeGetMessageProcessor.html">IssuesIssueLinkTypeGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueLinkTypeGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypeGet(java.lang.String, java.lang.String)">issuesIssueLinkTypeGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypesGetMessageProcessor.html">IssuesIssueLinkTypesGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueLinkTypesGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypesGet(java.lang.String)">issuesIssueLinkTypesGet(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueLinkTypeUpdateMessageProcessor.html">IssuesIssueLinkTypeUpdateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueLinkTypeUpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueLinkTypeUpdate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesIssueLinkTypeUpdate(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueMetadataGetMessageProcessor.html">IssuesIssueMetadataGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueMetadataGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueMetadataGet(java.lang.String, java.lang.String)">issuesIssueMetadataGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueTypeGetMessageProcessor.html">IssuesIssueTypeGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueTypeGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueTypeGet(java.lang.String, java.lang.String)">issuesIssueTypeGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesIssueTypesGetMessageProcessor.html">IssuesIssueTypesGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesIssueTypesGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesIssueTypesGet(java.lang.String)">issuesIssueTypesGet(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesNotifyMessageProcessor.html">IssuesNotifyMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesNotifyMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesNotify(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesNotify(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesPrioritiesGetMessageProcessor.html">IssuesPrioritiesGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesPrioritiesGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesPrioritiesGet(java.lang.String)">issuesPrioritiesGet(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesPriorityGetMessageProcessor.html">IssuesPriorityGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesPriorityGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesPriorityGet(java.lang.String, java.lang.String)">issuesPriorityGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinkCreateMessageProcessor.html">IssuesRemoteLinkCreateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesRemoteLinkCreateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinkCreate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesRemoteLinkCreate(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinkDeleteMessageProcessor.html">IssuesRemoteLinkDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesRemoteLinkDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinkDelete(java.lang.String, java.lang.String)">issuesRemoteLinkDelete(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinkGetMessageProcessor.html">IssuesRemoteLinkGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesRemoteLinkGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinkGet(java.lang.String, java.lang.String, java.lang.String)">issuesRemoteLinkGet(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinksGetMessageProcessor.html">IssuesRemoteLinksGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesRemoteLinksGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinksGet(java.lang.String, java.lang.String, java.lang.String)">issuesRemoteLinksGet(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesRemoteLinkUpdateMessageProcessor.html">IssuesRemoteLinkUpdateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesRemoteLinkUpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesRemoteLinkUpdate(java.lang.String, java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesRemoteLinkUpdate(java.lang.String, java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesStatusesGetMessageProcessor.html">IssuesStatusesGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesStatusesGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesStatusesGet(java.lang.String)">issuesStatusesGet(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesStatusGetMessageProcessor.html">IssuesStatusGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesStatusGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesStatusGet(java.lang.String, java.lang.String)">issuesStatusGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesTransitionPerformMessageProcessor.html">IssuesTransitionPerformMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesTransitionPerformMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesTransitionPerform(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesTransitionPerform(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesTransitionsGetMessageProcessor.html">IssuesTransitionsGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesTransitionsGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesTransitionsGet(java.lang.String, java.lang.String, java.lang.String)">issuesTransitionsGet(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesVoteAddMessageProcessor.html">IssuesVoteAddMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesVoteAddMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesVoteAdd(java.lang.String)">issuesVoteAdd(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesVoteDeleteMessageProcessor.html">IssuesVoteDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesVoteDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesVoteDelete(java.lang.String)">issuesVoteDelete(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesVotesGetMessageProcessor.html">IssuesVotesGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesVotesGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesVotesGet(java.lang.String, java.lang.String)">issuesVotesGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWatcherCreateMessageProcessor.html">IssuesWatcherCreateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesWatcherCreateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesWatcherCreate(java.lang.String, java.lang.String)">issuesWatcherCreate(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWatcherDeleteMessageProcessor.html">IssuesWatcherDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesWatcherDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesWatcherDelete(java.lang.String, java.lang.String)">issuesWatcherDelete(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWatchersGetMessageProcessor.html">IssuesWatchersGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesWatchersGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesWatchersGet(java.lang.String, java.lang.String)">issuesWatchersGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogCreateMessageProcessor.html">IssuesWorklogCreateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesWorklogCreateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogCreate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">issuesWorklogCreate(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogDeleteMessageProcessor.html">IssuesWorklogDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesWorklogDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogDelete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">issuesWorklogDelete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogGetMessageProcessor.html">IssuesWorklogGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesWorklogGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogGet(java.lang.String, java.lang.String, java.lang.String)">issuesWorklogGet(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogsGetMessageProcessor.html">IssuesWorklogsGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesWorklogsGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogsGet(java.lang.String, java.lang.String)">issuesWorklogsGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/IssuesWorklogUpdateMessageProcessor.html">IssuesWorklogUpdateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">IssuesWorklogUpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#issuesWorklogUpdate(java.lang.String, java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>, java.lang.String, java.lang.String)">issuesWorklogUpdate(java.lang.String, java.lang.String, java.lang.String, java.util.Map, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/MyselfMessageProcessor.html">MyselfMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">MyselfMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#myself()">myself()</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoriesGetMessageProcessor.html">ProjectCategoriesGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectCategoriesGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectCategoriesGet(java.lang.String)">projectCategoriesGet(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoryCreateMessageProcessor.html">ProjectCategoryCreateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectCategoryCreateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectCategoryCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">projectCategoryCreate(java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoryDeleteMessageProcessor.html">ProjectCategoryDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectCategoryDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectCategoryDelete(java.lang.String)">projectCategoryDelete(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoryGetMessageProcessor.html">ProjectCategoryGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectCategoryGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectCategoryGet(java.lang.String, java.lang.String)">projectCategoryGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectCategoryUpdateMessageProcessor.html">ProjectCategoryUpdateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectCategoryUpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectCategoryUpdate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">projectCategoryUpdate(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsComponentsGetMessageProcessor.html">ProjectsComponentsGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectsComponentsGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectsComponentsGet(java.lang.String, java.lang.String)">projectsComponentsGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsProjectGetMessageProcessor.html">ProjectsProjectGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectsProjectGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectsProjectGet(java.lang.String, java.lang.String)">projectsProjectGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsProjectsGetMessageProcessor.html">ProjectsProjectsGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectsProjectsGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectsProjectsGet(java.lang.String)">projectsProjectsGet(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsStatusesGetMessageProcessor.html">ProjectsStatusesGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectsStatusesGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectsStatusesGet(java.lang.String, java.lang.String)">projectsStatusesGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/ProjectsVersionsGetMessageProcessor.html">ProjectsVersionsGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">ProjectsVersionsGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#projectsVersionsGet(java.lang.String, java.lang.String)">projectsVersionsGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/SearchMessageProcessor.html">SearchMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">SearchMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#search(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String)">search(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserCreateMessageProcessor.html">UserCreateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">UserCreateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#userCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">userCreate(java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserDeleteMessageProcessor.html">UserDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">UserDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#userDelete(java.lang.String, java.lang.String)">userDelete(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserGetAssignableMessageProcessor.html">UserGetAssignableMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">UserGetAssignableMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#userGetAssignable(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">userGetAssignable(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserGetAssignableProjectMessageProcessor.html">UserGetAssignableProjectMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">UserGetAssignableProjectMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#userGetAssignableProject(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">userGetAssignableProject(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserGetMessageProcessor.html">UserGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">UserGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#userGet(java.lang.String, java.lang.String, java.lang.String)">userGet(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserSearchMessageProcessor.html">UserSearchMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">UserSearchMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#userSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.Boolean)">userSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.Boolean)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/UserUpdateMessageProcessor.html">UserUpdateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">UserUpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#userUpdate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>, java.lang.String, java.lang.String)">userUpdate(java.lang.String, java.util.Map, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/VersionCreateMessageProcessor.html">VersionCreateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">VersionCreateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#versionCreate(java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">versionCreate(java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/VersionDeleteMessageProcessor.html">VersionDeleteMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">VersionDeleteMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#versionDelete(java.lang.String)">versionDelete(java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/VersionGetMessageProcessor.html">VersionGetMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">VersionGetMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#versionGet(java.lang.String, java.lang.String)">versionGet(java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/modules/jirarest/processors/VersionUpdateMessageProcessor.html">VersionUpdateMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">VersionUpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html#versionUpdate(java.lang.String, java.lang.String, java.util.Map<java.lang.String, java.lang.Object>)">versionUpdate(java.lang.String, java.lang.String, java.util.Map)</a></code> method in <code><a href="../../../../../../java/org/mule/modules/jirarest/JiraRestConnector.html">JiraRestConnector</a></code>.&nbsp;</td>
+          </tr>
+  </table>
+    </div>
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+<div id="footer">
+Generated by <a href="http://www.mulesoft.com/devkit">Mule DevKit</a>. Document generation technology based on <a href="http://code.google.com/p/doclava/">Google's Doclava</a>.
+</div> <!-- end footer -->
+
+</div><!-- end jd-content -->
+</div><!-- doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize mule-developer-docs.js */
+</script>
+
+</body>
+</html>
